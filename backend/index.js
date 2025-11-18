@@ -12,7 +12,8 @@ const onConnect = mysql.createConnection({
     host: 'mysql',
     user: 'root',
     password: 'password',
-    database: 'testdb'
+    database: 'testdb',
+	ssl: { rejectUnauthorized: true }  
 });
 
 onConnect.connect((error) => {
