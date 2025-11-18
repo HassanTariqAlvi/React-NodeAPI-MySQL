@@ -1,9 +1,9 @@
 -- Create database if needed
-CREATE DATABASE IF NOT EXISTS unialso1_adminpanelnodejs
+CREATE DATABASE IF NOT EXISTS app-db
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE unialso1_adminpanelnodejs;
+USE app-db;
 
 -- Drop table if already exists (prevents conflicts)
 DROP TABLE IF EXISTS users;
