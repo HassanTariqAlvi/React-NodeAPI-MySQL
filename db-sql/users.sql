@@ -1,18 +1,13 @@
--- Drop table if already exists (prevents conflicts)
+-- Drop table if already exists
 DROP TABLE IF EXISTS users;
 
--- Create users table
+-- Create users table with id as AUTO_INCREMENT PRIMARY KEY
 CREATE TABLE users (
-  id INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   work VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Add primary key and AUTO_INCREMENT
-ALTER TABLE users
-  ADD PRIMARY KEY (id),
-  MODIFY id INT NOT NULL AUTO_INCREMENT;
 
 -- Insert dummy data
 INSERT INTO users (name, email, work) VALUES
